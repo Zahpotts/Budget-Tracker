@@ -14,7 +14,7 @@ const ExpenseEntries = () => {
 
     return (
         <div className="bg-red-100 border border-red-500 rounded-md p-4 w-full max-w-md">
-            <h2 className="text-2xl font-semibold mb-4">Income Entries</h2>
+            <h2 className="text-2xl font-semibold mb-4">Expense Entries</h2>
             <div className="mb-4">
                 <input
                     type="text"
@@ -34,7 +34,7 @@ const ExpenseEntries = () => {
                     className="bg-red-500 text-white px-4 py-2 rounded w-full"
                     onClick={addExpense}
                 >
-                    + Add Income
+                    + Add Expense
                 </button>
             </div>
             <table className="w-full text-left">
@@ -45,7 +45,7 @@ const ExpenseEntries = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {state.incomes.map((expense, index) => (
+                    {state.expenses.map((expense, index) => (
                         <tr key={index}>
                             <td className="border p-2">{expense.description}</td>
                             <td className="border p-2">${expense.amount.toFixed(2)}</td>
